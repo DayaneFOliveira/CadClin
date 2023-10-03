@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <!-- Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- �cones Bootstrap. Para consultar os �cones: https://icons.getbootstrap.com -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- favicon -->
+        <link rel="icon" href="images/logo.png" type="image/png"> 
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/login.css" />
+    </head>
+<body>
+    <h1>Love Pets</h1> <!-- titulo principal em destaque com o nome da clinica-->
+   
+    <img src="images/logo.png"        
+         title="Logo da Empresa"
+         alt="logo"
+         width="100" />   <!-- logo da empresa logo abaixo do nome e em cima do formulario de login , em destaque bem grande e centralizado -->
+</br>
+<legend>Insira os dados para fazer seu Login ✔️</legend> <!-- um subtitulo antes dor formulario indicando ao usuario para fazer seu login-->
+  <form method="post"> <!-- criação do formulario -->
+        
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" required autofocus
+            placeholder="dj@gmail.com" title="Informe o email de cadastro"/> <!-- botao de entrada para ser colocado o email , com placeholder 
+                 dando exemplo de como deve ser o email e sendo obrigatorio colocar a informação pelo usuario -->
+            
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required
+            placeholder="Senha" title="Senha do cadastro" maxlength="10" /> <!-- botão de entrada para ser colocado a senha com placeholder 
+                dando exemplo de como deve ser a senha  e sendo obrigatorio colocar a informação pelo usuario -->
+        
+        <a href=""> Cadastre-se </a> <!-- linha de exemplo de como seria o local para cadastrar um login-->
+                
+    </form> <!-- fechamento do formulario -->
+    <br>
+    <input type="submit" value="Login 👍🏻" id="login" onclick="validaLogin(event)" class="botao"/> <!--botão de login para entrar na pagina depois de ter colocado o email e a senha-->
+    <input type="reset" value="Limpar 👎🏻" id="limpar" class="botao" />  <!--botão para limpar os campos caso o usuario tenha errado alguma letra ou numero -->
+  
+
+<!--carregando o JS do projeto-->
+<script src="js/login.js"></script>
+</body>
+</html>

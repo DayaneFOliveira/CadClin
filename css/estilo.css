@@ -1,0 +1,217 @@
+/* Estilo do Projeto*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@100;300;400&display=swap');
+
+body{
+    height: 900vh;
+    background: linear-gradient(to bottom, #d5eef7,#9be2f9); /*cores de fundo levemente azul com gradiante */
+    font-family: 'Outfit', sans-serif;/*escolha da fonte*/
+    font-weight: 100;
+    margin: 0;
+    margin-left: 15%;
+    padding: 0; /* Espaçamento interno */
+    display: flex; /* torna a UI flexivel para responsividade*/
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(to bottom, #9be2f9,#e6f6fc); /*cores de fundo levemente azul com gradiante */
+    color: #fff;
+    padding: 10px 0; /* Espaçamento interno */
+    display: flex;/* torna a UI flexivel para responsividade*/
+    
+}
+
+.logo {
+    display: flex;/* torna a UI flexivel para responsividade*/
+    align-items: center;
+    width: 100%;
+    
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 45%;
+    margin-top: 1%; /*margem superior*/
+    
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2%; /*margem superior*/
+    color: #202020; /* cor do texto*/
+}
+
+nav.menu-lateral{
+    width: 15%;
+    height: 100%;
+    background-color: #202020; /* cor do fundo*/
+    padding: 40px 0px 40px 1%; /* Espaçamento interno */
+    box-shadow: 3px 0 0 #2fbcf4; /* Sombra quando o campo está selecionado */
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+nav.menu-lateral.btn-expandir{
+    width: 10%;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i{
+    color: #fff; /* cor do texto*/
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style-type: none;
+    margin-left: 0px;
+    padding-left:0;
+}
+
+ul li.ativo{
+    background-color: #2fbcf4; /* cor do fundo*/
+}
+
+ul li.item-menu:hover{
+    background: #2fbcf4; /*Ao passar o mouse ele muda de cor, auxiliando na identificação de onde esta localizado o mouse*/
+}
+
+#iconeInicio{
+    color:#fff; /* cor do texto*/
+}
+
+#iconeCadastro{
+    color:#fff; /* cor do texto*/
+}
+
+ul li.item-menu a{
+    text-decoration: none;
+    font-size: 100%;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+    margin-left: 15%;
+    font-size: 130%;
+}
+
+ul li.item-menu a > i {
+    font-size: 30%;
+}
+
+ul li.item-menu a .icon > i{
+    font-size: 30px;
+    margin-left: 0px;
+}
+
+.formulario{
+    margin-left: 300px;
+}
+
+.container{
+    display: flex;/* torna a UI flexivel para responsividade*/
+}
+
+.cadastro {
+    max-width: 200%;
+    margin: 0 auto;
+    margin-top: 1%; /*margem superior*/
+    padding: 20px;
+    margin-left: 1%;
+    background-color: #fff; /* cor do fundo*/
+    border-radius: 5px; /* arredondamento das bordas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra quando o campo está selecionado */
+    flex: 1;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Cor da borda quando o campo está selecionado */
+    border-radius: 3px; /* arredondamento das bordas */
+}
+
+/* Estilo quando o campo de entrada de texto está selecionado */
+input[type="text"]:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra quando o campo está selecionado */
+    border: 1px solid #007bff; /* Cor da borda quando o campo está selecionado */
+    outline: none; /* Remove a borda padrão de foco */
+}
+
+.combobox {
+    width: 100%;
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Cor da borda quando o campo está selecionado */
+    border-radius: 3px; /* arredondamento das bordas */
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Cor da borda quando o campo está selecionado */
+    border-radius: 3px; /* arredondamento das borda */
+}
+
+
+#salvar{
+    background: #2fbcf4; /*cor do botao de salvar*/
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Cor da borda quando o campo está selecionado */
+    border-radius: 16px; /*arredondamento de borda*/
+    cursor: pointer;
+}
+#salvar:hover{
+    background: #7970f1;/*Ao passar o mouse ele muda de cor, auxiliando na identificação de onde esta localizado o mouse*/
+   }  
+#limpar{ 
+    background: #f34c4c; /*cor do botao de Limpar*/
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Cor da borda quando o campo está selecionado */
+    border-radius: 16px; /*arredondamento de borda*/
+    cursor: pointer;
+    
+    
+}
+#limpar:hover{
+    background:  #7970f1; /*Ao passar o mouse ele muda de cor, auxiliando na identificação de onde esta localizado o mouse*/
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /*margem superior*/
+}
+
+table, th, td {
+    border: 1px solid #ccc; /* Cor da borda quando o campo está selecionado */
+}
+
+th, td {
+    padding: 8px; /* Espaçamento interno */
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(to bottom, #606af5,#9ea4f9); /*cores de fundo levemente gradiante */
+    color: #fff; /* cor do texto*/
+}

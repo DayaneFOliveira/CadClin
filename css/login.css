@@ -1,0 +1,72 @@
+
+body{
+    font-family:'sanserif','Verdana'; /*escolha da fonte*/
+    font-weight: 100;
+    background: linear-gradient(to bottom, #ebf0f5,#86b9ec); /* cores de fundo levemente azul com gradiante */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex; /* torna a UI flexivel para responsividade*/
+    flex-direction: column;
+    justify-content: center; /* centraliza tudo no meio da tela*/
+    align-items:center; /*centraliza os itens*/
+}
+h1{
+    color: rgb(5, 5, 5); /*cor do titulo*/
+}
+label{
+    display:block;
+    margin-bottom:8px;
+    margin-top:4px;
+    font-family: 'Lucida Sans'; /*escolha das fontes das legendas encima dos campos */
+}
+
+
+legend{
+    font-size: small;
+    padding: 4px;
+    text-align: center  /* deixa o campo que fala para o usuario se cadastrar centralizado junto com o formulario */
+    
+}
+form{
+    background-color: transparent; /* deixa transparente com a cor de fundo apenas mostra que tem um formulario , mas não destaca muito */
+    padding: 40px;
+    border-radius: 16px; /* arredondamento dos cantos */
+    box-shadow: 0 4px  8px rgba(0, 0, 0,0.8); /*sombreamento  */ 
+}
+input{
+    
+        display: block;
+        margin: 2px;
+        width: 200px;
+        height: 40px;
+        border-radius: 8px; /* estetica dos botoes de entrada email e senha */
+}
+
+#login{
+    background: #068f16; /*cor do botao de login*/
+}
+#login:hover{
+    background: #f6f5f5;
+    color:rgb(14, 14, 193) /* ao passar o mouse ele muda de cor assim ajuda o usuario a identificar onde esta */
+   }  
+#limpar{
+    background: #d63434; /*cor do botao de senha*/
+    
+    
+}
+#limpar:hover{
+    background: #f6f5f5;
+    color: rgb(207, 33, 33) /* ao passar o mouse ele muda de cor assim ajuda o usuario a identificar onde esta */
+}
+    
+
+.botao{
+   
+    padding: 5px 32px; /* 1o é na vertical e o 2o é na horizontal */
+    border-radius: 16px;
+    color:rgba(255, 255, 255, 0.8);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    cursor: pointer;
+    margin-left: 15px /* estetica dos botao de login e senha , deixa branco quando coloca o mouse encima , e muda o cursor com pointer  */
+}

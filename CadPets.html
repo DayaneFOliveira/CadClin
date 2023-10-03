@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CadPets</title>
+        <!-- Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Ícones Bootstrap. Para consultar os ícones: https://icons.getbootstrap.com -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/estilo.css" />
+    </head>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo da Empresa"> <!--Logo da empresa-->
+            <h1>Love Pets</h1> <!--Nome da Empresa-->
+        </div>   
+    </header>   
+    <body>
+        <!--navbar - Itens do Menu-->
+        <nav class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list" id="btn-exp"></i>  <!--Icone lista-->
+            </div>
+            <ul>
+                <li class="item-menu">
+                    <a href="login.html" id="iconeInicio">
+                        <span class="icon"><i class="bi bi-house-door"></i></span> <!--Icone Inicio-->
+                        <span class="txt-link">Início</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="CadPets.html" id="iconeCadastro">
+                        <span class="icon"><i class="bi bi-heart-pulse"></i></span> <!--Icone Pets-->
+                        <span class="txt-link">Pets</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!--coluna do formulário cadastro-->          
+       <div class="container">
+        <div class="cadastro">
+            <h1>Cadastro do Pet</h1> <!-- Nome da tela de cadastro -->
+            <form id="registroForm">
+                <!-- Nome do proprietário-->
+                <label for="proprietario">Nome do Proprietário:</label>
+                <input type="text" id="proprietario" name="proprietario" required title="Nome do Proprietário" placeholder="Ex.: Ricardo Leme">
+                <!-- Telefone do proprietário-->
+                <label for="telefone">Telefone do Proprietário:</label>
+                <input type="text" id="telefone" name="telefone" required placeholder="(11)94444-5555" maxlength="11" 
+                pattern="{11}" title="Informe o TEL no formato (11)94444-5555">
+                <!-- Nome do pet-->
+                <label for="nome">Nome do Pet:</label>
+                <input type="text" id="nome" name="nome" required title="Nome do Pet" placeholder="Ex.: Belinha">
+                <!-- raça do pet-->
+                <label for="raca">Raça:</label>
+                <input type="text" id="raca" name="raca"  title="Raça do Pet" placeholder="Ex.: Shiba Inu">  
+                <!-- Especie do pet-->
+                <label for="especie">Escolha uma espécie:</label><br>
+                    <select id="especie" name="especie" class="combobox" required>
+                    <option value="" disabled selected>Selecione...</option>
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Aves">Aves</option>
+                    <option value="Outros">Outros</option>
+                    </select>
+                <br>
+                <!-- Data de nascimento do pet-->
+                <label for="data">Data de Nascimento:</label><br>
+                <input type="date" id="data" name="data" required>
+                <br>
+                <!-- Sexo do pet-->
+                <label for="sexo">Sexo:</label>
+                <br>     
+                <input type="radio" id="radioFemea" name="radio" value="Fêmea" required>           
+                <label for="radioCachorro">Fêmea</label>
+                <input type="radio" id="radioMacho" name="radio" value="Macho" required>
+                <label for="radioGato">Macho</label>
+
+                <br><br>                
+                <!-- Checkbox para saber se o cadastro esta ativo-->
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="checkbox">Ativo</label>
+                <br><br>
+                <!--Botões de Salvar e limpar do Form de cadastro-->
+                <div class="botoes">
+                    <input type="submit" value="Salvar 💾" id="salvar" onclick="validaLogin(event)" class="botao"/> <!--botão de login para entrar na pagina depois de ter colocado o email e a senha-->
+                    <input type="reset" value="Limpar 🧹" id="limpar" class="botao" />  <!--botão para limpar os campos caso o usuario tenha errado alguma letra ou numero -->
+                </div>
+
+            </form>
+        </div>
+         <!--coluna do formulário de registros--> 
+      <div class="cadastro">
+            <section class="registros">
+                <h1>Registros</h1> <!-- Nome da tela de registros -->
+                <!-- Criando uma tabela de registros -->
+                   <table id="registrosTable">
+                    <thead>
+                        <tr>
+                            <th>Nome Pet</th>
+                            <th>Data Nasc.</th>
+                            <th>Espécie</th>
+                            <th>Sexo</th>
+                            <th>Proprietário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Os registros serão adicionados dinamicamente dentro do "tbody-->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    </body>
+    <footer>
+    </footer>
+    <script src="js/CadPets.js"></script>
+</html>
